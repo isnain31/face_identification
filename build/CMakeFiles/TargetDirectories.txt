@@ -1,0 +1,1 @@
+/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles/facedetect.dir

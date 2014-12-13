@@ -1,0 +1,71 @@
+\documentclass[11pt]{article}
+%Gummi|061|=)
+\title{\textbf{Human face recognition \& tracking in Real Time Authentication}}
+\author{\\ \\ \\ Sivasurya Santhanam\\
+		metrikel Nr. 9022617 \\
+		Isnain Siddique\\
+		metrikel Nr. 9022617
+		\\ \\ 	\\ \\ 	\\ \\
+		Autonomous Systems \\ 
+		Hochshule Bonn-Rhein-Sieg \\ \\
+		\\ 
+		\\
+		Nov 4, 2014
+		}
+		
+
+\date{}
+\begin{document}
+
+\maketitle
+
+
+
+\newpage
+\section*{Abstract}
+\paragraph*{} Computer vision applications like gaming, teleconferencing, surveillance require accurate detection, tracking and identification of human face. This project will attempt to detect, track and identify and human faces in real time to authenticate users in secured system. \\
+
+\section*{Motivation}
+\paragraph*{} Most of the secured systems these days use password which is combination of alpha numeric characters. This naive nature of security can be made more secured if visual aspects like face identification is involved.
+To identify a person from face in real first the face has to be detected from a video frame and it has to be tracked as well. Many computer vision related researches have been carried out in human face detection, tracking. So since the major purpose of the project is to get an idea on how the computer vision really works we thought this project will give us the perfect opportunity to do so as it covers quite an wide area.
+
+
+\section*{Project Overview:}
+\paragraph*{} In this project we like to interface a system that is currently authenticating users only by password with a camera which will take the video stream as input data. Receiving the input data the application will detect and track human face along with identify the face. Then based on the identification result the application will allow or disallow access to the system. Face tracking will be used to ensure that only the authorized person is still accessing. The application will work with two dimensional data only. \\
+
+\section*{Approach:}
+\paragraph*{} So the task in hand can be broken down in three major parts:
+\begin{itemize}
+	\item Face Detection
+	\item Face Tracking
+	\item Face Identification
+\end{itemize}
+
+\paragraph*{} For face detection we decided to use Haar feature-based cascaded classifiers as described in [1]. This approach includes training using lots of positive and negative samples from which the features can be extracted using constitutional kernel like figure 1. 
+
+\paragraph*{} Thus there will be a huge number of features so to make the application more suitable for real time computation integral image technique along with adaboost and cascading will be used. 
+
+\paragraph*{} To track faces we will have to use approaches like mean shift and CAMshift since CAMshift can re-adjust the window size of the detected face which will eventually give chance to determine of authentic user is in background and unauthorized user is in foreground this sort of scenarios. 
+
+\paragraph{} Since we are basically using OpenCV and there is built in library functions to use these techniques we propose to use them for this part of the project. For the crucial part of the application, identification, we propose to use Local Binary Pattern Histograms[2]. We this the other popular approaches like Eigenface or Fisherfaces are not going to be feasible for this project due to their high dimensionality [3].
+
+\paragraph{} For identification purpose since we have to train the application we will need labeled dataset. We propose to create a data set of at least 20 person in .pgm format. In spite of the robustness of Local Binary Pattern Histograms in real time scenario we like to take at least 3 images per person aligning different orientation.
+
+\paragraph*{} Apart from these three major parts we still have to detect active face in multiple face detected scenario. We propose to do that based on boundary size of detected face. Also we need to deal with the system internal API's to gain access to authenticated users and deny unauthorized users.
+
+\section*{Risk:} Considering the semester load along with our R\&D work load it might not be possible in the end make it completely robust under all working conditions and it can be the case that we might run out of time before implementing complete application for computer login system but we will try our best to reach as close as possible.
+\section*{Reference:}
+\begin{enumerate}
+  \item Paul Viola, Michael Jones. Rapid Object Detection using a Boosted Cascade of Simple Features. Conference on Computer Vision AND Pattern Recognition 2001
+\item Ahonen, T., Hadid, A., and Pietikainen, M. Face Recognition with Local Binary Patterns. Computer Vision - ECCV 2004 (2004), 469–481.
+
+  \item Belhumeur, P. N., Hespanha, J., and Kriegman, D. Eigenfaces vs. Fisherfaces: Recognition Using Class Specific Linear Projection. IEEE Transactions on Pattern Analysis and Machine Intelligence 19, 7 (1997), 711–720
+	
+	\item Florent Ducultz, Michel Dhome and Frederic Jurie. Real time 3D face tracking from appearance. LASMEA - CNRS UMR 6602.
+	
+
+\end{enumerate}
+
+
+
+\end{document}

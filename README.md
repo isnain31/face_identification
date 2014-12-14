@@ -7,4 +7,5 @@ Steps to run :
 2. cmake ..
 3. make
 
+
 Then go to the bin folder and run the facedetect binary with dd.txt as parameter

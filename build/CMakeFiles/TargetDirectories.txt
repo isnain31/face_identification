@@ -1,1 +1,6 @@
+/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles/facecrop.dir
 /home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles/facedetect.dir
+/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles/facedetecttest.dir
+/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles/greyconv.dir
+/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles/test.dir
+/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles/train.dir

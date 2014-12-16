@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/is9/MAS 3/cv/opencv test/facedetect/greyconv.cpp
+opencv2/imgproc/imgproc.hpp
+/home/is9/MAS 3/cv/opencv test/facedetect/opencv2/imgproc/imgproc.hpp
+opencv2/contrib/contrib.hpp
+/home/is9/MAS 3/cv/opencv test/facedetect/opencv2/contrib/contrib.hpp
+opencv2/core/core.hpp
+/home/is9/MAS 3/cv/opencv test/facedetect/opencv2/core/core.hpp
+opencv2/highgui/highgui.hpp
+/home/is9/MAS 3/cv/opencv test/facedetect/opencv2/highgui/highgui.hpp
+iostream
+-
+dirent.h
+-
+string
+-
+

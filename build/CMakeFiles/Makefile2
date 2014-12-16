@@ -50,13 +50,48 @@ CMAKE_SOURCE_DIR = "/home/is9/MAS 3/cv/opencv test/facedetect"
 CMAKE_BINARY_DIR = "/home/is9/MAS 3/cv/opencv test/facedetect/build"
 
 #=============================================================================
+# Target rules for target CMakeFiles/facecrop.dir
+
+# All Build rule for target.
+CMakeFiles/facecrop.dir/all:
+	$(MAKE) -f CMakeFiles/facecrop.dir/build.make CMakeFiles/facecrop.dir/depend
+	$(MAKE) -f CMakeFiles/facecrop.dir/build.make CMakeFiles/facecrop.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles"  1
+	@echo "Built target facecrop"
+.PHONY : CMakeFiles/facecrop.dir/all
+
+# Include target in all.
+all: CMakeFiles/facecrop.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/facecrop.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles" 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/facecrop.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles" 0
+.PHONY : CMakeFiles/facecrop.dir/rule
+
+# Convenience name for target.
+facecrop: CMakeFiles/facecrop.dir/rule
+.PHONY : facecrop
+
+# clean rule for target.
+CMakeFiles/facecrop.dir/clean:
+	$(MAKE) -f CMakeFiles/facecrop.dir/build.make CMakeFiles/facecrop.dir/clean
+.PHONY : CMakeFiles/facecrop.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/facecrop.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/facedetect.dir
 
 # All Build rule for target.
 CMakeFiles/facedetect.dir/all:
 	$(MAKE) -f CMakeFiles/facedetect.dir/build.make CMakeFiles/facedetect.dir/depend
 	$(MAKE) -f CMakeFiles/facedetect.dir/build.make CMakeFiles/facedetect.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles"  1
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles"  2
 	@echo "Built target facedetect"
 .PHONY : CMakeFiles/facedetect.dir/all
 
@@ -82,6 +117,146 @@ CMakeFiles/facedetect.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/facedetect.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/facedetecttest.dir
+
+# All Build rule for target.
+CMakeFiles/facedetecttest.dir/all:
+	$(MAKE) -f CMakeFiles/facedetecttest.dir/build.make CMakeFiles/facedetecttest.dir/depend
+	$(MAKE) -f CMakeFiles/facedetecttest.dir/build.make CMakeFiles/facedetecttest.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles"  3
+	@echo "Built target facedetecttest"
+.PHONY : CMakeFiles/facedetecttest.dir/all
+
+# Include target in all.
+all: CMakeFiles/facedetecttest.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/facedetecttest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles" 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/facedetecttest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles" 0
+.PHONY : CMakeFiles/facedetecttest.dir/rule
+
+# Convenience name for target.
+facedetecttest: CMakeFiles/facedetecttest.dir/rule
+.PHONY : facedetecttest
+
+# clean rule for target.
+CMakeFiles/facedetecttest.dir/clean:
+	$(MAKE) -f CMakeFiles/facedetecttest.dir/build.make CMakeFiles/facedetecttest.dir/clean
+.PHONY : CMakeFiles/facedetecttest.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/facedetecttest.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/greyconv.dir
+
+# All Build rule for target.
+CMakeFiles/greyconv.dir/all:
+	$(MAKE) -f CMakeFiles/greyconv.dir/build.make CMakeFiles/greyconv.dir/depend
+	$(MAKE) -f CMakeFiles/greyconv.dir/build.make CMakeFiles/greyconv.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles"  4
+	@echo "Built target greyconv"
+.PHONY : CMakeFiles/greyconv.dir/all
+
+# Include target in all.
+all: CMakeFiles/greyconv.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/greyconv.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles" 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/greyconv.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles" 0
+.PHONY : CMakeFiles/greyconv.dir/rule
+
+# Convenience name for target.
+greyconv: CMakeFiles/greyconv.dir/rule
+.PHONY : greyconv
+
+# clean rule for target.
+CMakeFiles/greyconv.dir/clean:
+	$(MAKE) -f CMakeFiles/greyconv.dir/build.make CMakeFiles/greyconv.dir/clean
+.PHONY : CMakeFiles/greyconv.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/greyconv.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test.dir
+
+# All Build rule for target.
+CMakeFiles/test.dir/all:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/depend
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles"  5
+	@echo "Built target test"
+.PHONY : CMakeFiles/test.dir/all
+
+# Include target in all.
+all: CMakeFiles/test.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles" 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles" 0
+.PHONY : CMakeFiles/test.dir/rule
+
+# Convenience name for target.
+test: CMakeFiles/test.dir/rule
+.PHONY : test
+
+# clean rule for target.
+CMakeFiles/test.dir/clean:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/clean
+.PHONY : CMakeFiles/test.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/test.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/train.dir
+
+# All Build rule for target.
+CMakeFiles/train.dir/all:
+	$(MAKE) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/depend
+	$(MAKE) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles"  6
+	@echo "Built target train"
+.PHONY : CMakeFiles/train.dir/all
+
+# Include target in all.
+all: CMakeFiles/train.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/train.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles" 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/train.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/is9/MAS 3/cv/opencv test/facedetect/build/CMakeFiles" 0
+.PHONY : CMakeFiles/train.dir/rule
+
+# Convenience name for target.
+train: CMakeFiles/train.dir/rule
+.PHONY : train
+
+# clean rule for target.
+CMakeFiles/train.dir/clean:
+	$(MAKE) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/clean
+.PHONY : CMakeFiles/train.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/train.dir/clean
 .PHONY : clean
 
 #=============================================================================

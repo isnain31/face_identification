@@ -41,5 +41,10 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 SET(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/facecrop.dir/DependInfo.cmake"
   "CMakeFiles/facedetect.dir/DependInfo.cmake"
+  "CMakeFiles/facedetecttest.dir/DependInfo.cmake"
+  "CMakeFiles/greyconv.dir/DependInfo.cmake"
+  "CMakeFiles/test.dir/DependInfo.cmake"
+  "CMakeFiles/train.dir/DependInfo.cmake"
   )

@@ -96,6 +96,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named facecrop
+
+# Build rule for target.
+facecrop: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 facecrop
+.PHONY : facecrop
+
+# fast build rule for target.
+facecrop/fast:
+	$(MAKE) -f CMakeFiles/facecrop.dir/build.make CMakeFiles/facecrop.dir/build
+.PHONY : facecrop/fast
+
+#=============================================================================
 # Target rules for targets named facedetect
 
 # Build rule for target.
@@ -107,6 +120,82 @@ facedetect: cmake_check_build_system
 facedetect/fast:
 	$(MAKE) -f CMakeFiles/facedetect.dir/build.make CMakeFiles/facedetect.dir/build
 .PHONY : facedetect/fast
+
+#=============================================================================
+# Target rules for targets named facedetecttest
+
+# Build rule for target.
+facedetecttest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 facedetecttest
+.PHONY : facedetecttest
+
+# fast build rule for target.
+facedetecttest/fast:
+	$(MAKE) -f CMakeFiles/facedetecttest.dir/build.make CMakeFiles/facedetecttest.dir/build
+.PHONY : facedetecttest/fast
+
+#=============================================================================
+# Target rules for targets named greyconv
+
+# Build rule for target.
+greyconv: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 greyconv
+.PHONY : greyconv
+
+# fast build rule for target.
+greyconv/fast:
+	$(MAKE) -f CMakeFiles/greyconv.dir/build.make CMakeFiles/greyconv.dir/build
+.PHONY : greyconv/fast
+
+#=============================================================================
+# Target rules for targets named test
+
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
+
+#=============================================================================
+# Target rules for targets named train
+
+# Build rule for target.
+train: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 train
+.PHONY : train
+
+# fast build rule for target.
+train/fast:
+	$(MAKE) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/build
+.PHONY : train/fast
+
+facecrop.o: facecrop.cpp.o
+.PHONY : facecrop.o
+
+# target to build an object file
+facecrop.cpp.o:
+	$(MAKE) -f CMakeFiles/facecrop.dir/build.make CMakeFiles/facecrop.dir/facecrop.cpp.o
+.PHONY : facecrop.cpp.o
+
+facecrop.i: facecrop.cpp.i
+.PHONY : facecrop.i
+
+# target to preprocess a source file
+facecrop.cpp.i:
+	$(MAKE) -f CMakeFiles/facecrop.dir/build.make CMakeFiles/facecrop.dir/facecrop.cpp.i
+.PHONY : facecrop.cpp.i
+
+facecrop.s: facecrop.cpp.s
+.PHONY : facecrop.s
+
+# target to generate assembly for a file
+facecrop.cpp.s:
+	$(MAKE) -f CMakeFiles/facecrop.dir/build.make CMakeFiles/facecrop.dir/facecrop.cpp.s
+.PHONY : facecrop.cpp.s
 
 facedetect.o: facedetect.cpp.o
 .PHONY : facedetect.o
@@ -132,6 +221,102 @@ facedetect.cpp.s:
 	$(MAKE) -f CMakeFiles/facedetect.dir/build.make CMakeFiles/facedetect.dir/facedetect.cpp.s
 .PHONY : facedetect.cpp.s
 
+facedetecttest.o: facedetecttest.cpp.o
+.PHONY : facedetecttest.o
+
+# target to build an object file
+facedetecttest.cpp.o:
+	$(MAKE) -f CMakeFiles/facedetecttest.dir/build.make CMakeFiles/facedetecttest.dir/facedetecttest.cpp.o
+.PHONY : facedetecttest.cpp.o
+
+facedetecttest.i: facedetecttest.cpp.i
+.PHONY : facedetecttest.i
+
+# target to preprocess a source file
+facedetecttest.cpp.i:
+	$(MAKE) -f CMakeFiles/facedetecttest.dir/build.make CMakeFiles/facedetecttest.dir/facedetecttest.cpp.i
+.PHONY : facedetecttest.cpp.i
+
+facedetecttest.s: facedetecttest.cpp.s
+.PHONY : facedetecttest.s
+
+# target to generate assembly for a file
+facedetecttest.cpp.s:
+	$(MAKE) -f CMakeFiles/facedetecttest.dir/build.make CMakeFiles/facedetecttest.dir/facedetecttest.cpp.s
+.PHONY : facedetecttest.cpp.s
+
+greyconv.o: greyconv.cpp.o
+.PHONY : greyconv.o
+
+# target to build an object file
+greyconv.cpp.o:
+	$(MAKE) -f CMakeFiles/greyconv.dir/build.make CMakeFiles/greyconv.dir/greyconv.cpp.o
+.PHONY : greyconv.cpp.o
+
+greyconv.i: greyconv.cpp.i
+.PHONY : greyconv.i
+
+# target to preprocess a source file
+greyconv.cpp.i:
+	$(MAKE) -f CMakeFiles/greyconv.dir/build.make CMakeFiles/greyconv.dir/greyconv.cpp.i
+.PHONY : greyconv.cpp.i
+
+greyconv.s: greyconv.cpp.s
+.PHONY : greyconv.s
+
+# target to generate assembly for a file
+greyconv.cpp.s:
+	$(MAKE) -f CMakeFiles/greyconv.dir/build.make CMakeFiles/greyconv.dir/greyconv.cpp.s
+.PHONY : greyconv.cpp.s
+
+test.o: test.cpp.o
+.PHONY : test.o
+
+# target to build an object file
+test.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.o
+.PHONY : test.cpp.o
+
+test.i: test.cpp.i
+.PHONY : test.i
+
+# target to preprocess a source file
+test.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.s
+.PHONY : test.cpp.s
+
+train.o: train.cpp.o
+.PHONY : train.o
+
+# target to build an object file
+train.cpp.o:
+	$(MAKE) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/train.cpp.o
+.PHONY : train.cpp.o
+
+train.i: train.cpp.i
+.PHONY : train.i
+
+# target to preprocess a source file
+train.cpp.i:
+	$(MAKE) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/train.cpp.i
+.PHONY : train.cpp.i
+
+train.s: train.cpp.s
+.PHONY : train.s
+
+# target to generate assembly for a file
+train.cpp.s:
+	$(MAKE) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/train.cpp.s
+.PHONY : train.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -139,11 +324,31 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... facecrop"
 	@echo "... facedetect"
+	@echo "... facedetecttest"
+	@echo "... greyconv"
 	@echo "... rebuild_cache"
+	@echo "... test"
+	@echo "... train"
+	@echo "... facecrop.o"
+	@echo "... facecrop.i"
+	@echo "... facecrop.s"
 	@echo "... facedetect.o"
 	@echo "... facedetect.i"
 	@echo "... facedetect.s"
+	@echo "... facedetecttest.o"
+	@echo "... facedetecttest.i"
+	@echo "... facedetecttest.s"
+	@echo "... greyconv.o"
+	@echo "... greyconv.i"
+	@echo "... greyconv.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
+	@echo "... train.o"
+	@echo "... train.i"
+	@echo "... train.s"
 .PHONY : help
 
 

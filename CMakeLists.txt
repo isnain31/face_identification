@@ -24,5 +24,30 @@ INCLUDE_DIRECTORIES(
 ADD_EXECUTABLE(facedetect
  ${PROJECT_SOURCE_DIR}/facedetect.cpp
 )
+ADD_EXECUTABLE(greyconv
+ ${PROJECT_SOURCE_DIR}/greyconv.cpp
+)
+
+ADD_EXECUTABLE(facecrop
+ ${PROJECT_SOURCE_DIR}/facecrop.cpp
+)
+
+ADD_EXECUTABLE(facedetecttest
+ ${PROJECT_SOURCE_DIR}/facedetecttest.cpp
+)
+
+ADD_EXECUTABLE(train
+ ${PROJECT_SOURCE_DIR}/train.cpp
+)
+
+ADD_EXECUTABLE(test
+ ${PROJECT_SOURCE_DIR}/test.cpp
+)
+
 
 target_link_libraries(facedetect ${OpenCV_LIBS})
+target_link_libraries(greyconv ${OpenCV_LIBS})
+target_link_libraries(facecrop ${OpenCV_LIBS})
+target_link_libraries(facedetecttest ${OpenCV_LIBS})
+target_link_libraries(train ${OpenCV_LIBS})
+target_link_libraries(test ${OpenCV_LIBS})

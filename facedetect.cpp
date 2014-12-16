@@ -19,7 +19,8 @@
  String face_cascade_name = "haarcascade_frontalface_alt.xml";
  CascadeClassifier face_cascade;
  string window_name = "Capture - Face detection";
- Ptr<FaceRecognizer> model = createLBPHFaceRecognizer(6,8,8,8,123.0);
+// Ptr<FaceRecognizer> model = createLBPHFaceRecognizer(6,8,8,8,123.0);
+ Ptr<FaceRecognizer> model = createLBPHFaceRecognizer();
  RNG rng(12345);
 
  static void read_csv(const string& filename, vector<Mat>& images, vector<int>& labels, char separator = ';') {
@@ -86,7 +87,7 @@
     
 
     //-- 2. Read the video stream
-    capture = cvCaptureFromCAM( -1 );
+    capture = cvCaptureFromCAM( 1 );
     if( capture )
     {
      while( true )
@@ -120,21 +121,9 @@
     
 
 
-    /* 
-cout << "Model Information:" << endl;
-    string model_info = format("\tLBPH(radius=%i, neighbors=%i, grid_x=%i, grid_y=%i, threshold=%.2f)",
-            model->getInt("radius"),
-            model->getInt("neighbors"),
-            model->getInt("grid_x"),
-            model->getInt("grid_y"),
-            model->getDouble("threshold"));
-    cout << model_info << endl;
-    // We could get the histograms for example:
-    vector<Mat> histograms = model->getMatVector("histograms");
-    // But should I really visualize it? Probably the length is interesting:
-    cout << "Size of the histograms: " << histograms[0].total() << endl; 
-	waitKey(0);     
-    */	
+   
+    
+    
 
     return 0;
 
@@ -154,15 +143,35 @@ void detectAndDisplay( Mat frame )
 
   cvtColor( frame, frame_gray, CV_BGR2GRAY );
   equalizeHist( frame_gray, frame_gray );
+	
+
+cout << "Model Information:" << endl;
+    string model_info = format("\tLBPH(radius=%i, neighbors=%i, grid_x=%i, grid_y=%i, threshold=%.2f)",
+            model->getInt("radius"),
+            model->getInt("neighbors"),
+            model->getInt("grid_x"),
+            model->getInt("grid_y"),
+            model->getDouble("threshold"));
+    cout << model_info << endl;
+    // We could get the histograms for example:
+    vector<Mat> histograms = model->getMatVector("histograms");
+    // But should I really visualize it? Probably the length is interesting:
+    cout << "Size of the histograms: " << histograms[0].total() << endl; 
+
 
   //-- Detect faces
   face_cascade.detectMultiScale( frame_gray, faces, 1.1, 2, 0|CV_HAAR_SCALE_IMAGE, Size(30, 30) );
 
   for( size_t i = 0; i < faces.size(); i++ )
   {
-    int predictedLabel = -1;
-    double confidence = 0.0;
-    model->predict(frame_gray( faces[i] ), predictedLabel, confidence);	
+   // int predictedLabel = -1;
+  //  double confidence = 0.0;
+  int predictedLabel = model->predict(frame_gray( faces[i]));
+  //  model->predict(frame_gray( faces[i] ), predictedLabel, confidence);	
+
+    //imwrite( "test.bmp", frame_gray( faces[i] ) );	
+
+
     Point center( faces[i].x + faces[i].width*0.5, faces[i].y + faces[i].height*0.5 );
     Point pp( faces[i].x,faces[i].y-10 );
     Point p( faces[i].x,faces[i].y );
